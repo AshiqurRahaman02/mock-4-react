@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import RetrieveData from '../components/RetrieveData'
+import PostData from '../components/PostData'
+
 
 function Home() {
+  const [dataVisible, setDataVisible] = useState(false)
+
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div >
+      <h2 className='nav'>
+        <span onClick={() => setDataVisible(false)}>Post Data</span>
+        <span onClick={() => setDataVisible(true)}>Retrieve Data</span>
+      </h2>
+      {
+        dataVisible? (<RetrieveData />): (<PostData />)
+      }
     </div>
   )
 }
