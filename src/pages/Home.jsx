@@ -4,7 +4,7 @@ import PostData from '../components/PostData'
 
 
 function Home() {
-  const [dataVisible, setDataVisible] = useState(false)
+  const [dataVisible, setDataVisible] = useState(true)
 
   return (
     <div >
